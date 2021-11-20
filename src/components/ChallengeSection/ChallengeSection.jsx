@@ -9,7 +9,9 @@ const ChallengeSection = ({
     wpm,
     timeRemaining,
     timerStarted,
-    testInfo
+    testInfo,
+    onInputChange,
+    startAgain
 }) => {
     
     return (
@@ -17,7 +19,17 @@ const ChallengeSection = ({
             <h1 data-aos="fade-down" className="challenge-section-header">
                 Take a Speed Test Now!
             </h1>
-            <TestContainer selectedParagraph={selectedParagraph} timeRemaining={timeRemaining} words={words} timerStarted={timerStarted} characters={characters} wpm={wpm} testInfo={testInfo}/>
+            <TestContainer 
+                selectedParagraph={selectedParagraph} 
+                timeRemaining={timeRemaining} 
+                words={words} 
+                timerStarted={timerStarted} 
+                characters={characters} 
+                wpm={wpm} 
+                testInfo={testInfo}
+                onInputChange={onInputChange}
+                startAgain= {startAgain}
+            />
            
         </div>
     );

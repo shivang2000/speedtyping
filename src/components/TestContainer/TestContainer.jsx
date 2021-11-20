@@ -10,7 +10,9 @@ const TestContainer = ({
     wpm,
     timeRemaining,
     timerStarted,
-    testInfo
+    testInfo,
+    onInputChange,
+    startAgain
 }) => {
     
     return (
@@ -19,11 +21,11 @@ const TestContainer = ({
             {
                 timeRemaining > 0 ? (
                     <div data-aos="fade-up" className="typing-callenge-cont">
-                        <TypingChallengeContainer timerStarted={timerStarted} selectedParagraph={selectedParagraph} timeRemaining={timeRemaining}  words={words} characters={characters} wpm={wpm} testInfo={testInfo} />
+                        <TypingChallengeContainer timerStarted={timerStarted} selectedParagraph={selectedParagraph} timeRemaining={timeRemaining}  words={words} characters={characters} wpm={wpm} testInfo={testInfo} onInputChange={onInputChange}/>
                     </div>
                 ) : (
                     <div className="try-again-cont">
-                        <TryAgain words={words} characters={characters} wpm={wpm} />
+                        <TryAgain words={words} characters={characters} wpm={wpm} startAgain={startAgain} />
                     </div> 
                 )
             }
